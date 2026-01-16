@@ -12,7 +12,7 @@
 }
 .skills-section {
   display: flex;
-  gap: 60px;                 /* space between boxes */
+  gap: 40px;                      space between boxes
   justify-content: center;
   margin-top: 50px;
 }
@@ -22,13 +22,28 @@
   gap: 40px;
   max-width: 800px;
   margin: 40px auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  
+  /* margin-right: 100px; */
+  margin-top: 20px;
+ 
+
 }
 
 .skills-box {
-  width: 320px;
+  width: 400px;
   border: 2px solid #000;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skills-box:hover {
+  transform: rotateY(10deg) rotateX('5deg') translateY(-10px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
 }
 
 .skills-box h3 {
@@ -39,11 +54,14 @@
 .skills-box ul {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
 .skills-box li {
-  margin-bottom: 10px;
+  margin-bottom: 10px ;
+
 }
+
 @media (max-width: 768px) {
   .skills-section {
     flex-direction: column;
